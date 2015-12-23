@@ -44,10 +44,9 @@ var tooltip = d3.tip()
     });
 
 //The url's to the data displayed
-data_url= '../data/return_yugene_graph_data_ENSG00000204531.tsv';
+data_url= '../data/json_format_clec4e_human_dev_s4m_very_small.txt';
 
 
-$('body').append('<div id="values"></div>');
 
 
 /* Extracting the data from the csv files for use in the graph
@@ -55,21 +54,12 @@ $('body').append('<div id="values"></div>');
  * calculating the min and max values of the graph */
 d3.tsv(data_url,function (error,data){
 
-    max = 1;  // YuGene is between 1 and 0
-    min = 0;
-    number_of_increments = 0;
-    count = 0; 
-
     data.forEach(function(d){
         // ths + on the front converts it into a number just in case
-        d.chip_type = +d.chip_type;
-        d.ds_id = +d.ds_id;
-        d.x_position = +d.x_position;
-        d.yugene_value = +d.yugene_value;
         
     });
 
-    title = "Overall Yugene Graph for POU5F1 without filtering";
+    title = "Overall Summary Horizontal Bar Graph for Clec4e ";
     subtitle1 = "Subtitle"
     subtitle2 = "Subtitle"
     target = rootDiv;
@@ -101,7 +91,6 @@ d3.tsv(data_url,function (error,data){
         //to have horizontal grid lines = width (to span accross the grid), otherwise = 0
         horizontal_grid_lines: width,
         legend_class: "legend",
-        increment: number_of_increments,
         legend_range: [0,100],
         line_stroke_width: "2px",
         margin_legend: width - 190,
