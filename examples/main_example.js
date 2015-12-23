@@ -59,6 +59,12 @@ d3.tsv(data_url,function (error,data){
         
     });
 
+
+    data = [{'name':'embryo','number':4},{'number':33,'name':'brain'}];
+    data = [4,5,6,7,7,56,6,6,7,77,0];
+
+
+
     title = "Overall Summary Horizontal Bar Graph for Clec4e ";
     subtitle1 = "Subtitle"
     subtitle2 = "Subtitle"
