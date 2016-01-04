@@ -175,4 +175,6 @@ circle.selected {
   shape-rendering: crispEdges;
 }
 
-
+.summary_horizontal_bar_graph {
+    float: left;
+}
