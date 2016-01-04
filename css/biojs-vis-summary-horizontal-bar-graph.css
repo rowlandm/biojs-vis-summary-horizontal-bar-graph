@@ -37,7 +37,7 @@ div.tooltip {
 .line-probe { stroke-width: 5px; }
 
 .bar {
-  fill: black;
+  /*fill: black; */
   opacity: 100;
 }
 

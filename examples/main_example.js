@@ -63,12 +63,12 @@ d3.json(data_url,function (error,data){
 
     data = [{'name':'embryo','number':4},
             {'number':33,'name':'cell'},
-            {'number':233,'name':'tissue'},
+            {'number':233,'name':'tissueB'},
             {'number':133,'name':'nothingA'},
-            {'number':233,'name':'tissue'},
+            {'number':238,'name':'tissueK'},
             {'number':13,'name':'nothing'},
-            {'number':23,'name':'tissue'},
-            {'number':1453,'name':'nothingB'},
+            {'number':23,'name':'tissueF'},
+            {'number':145,'name':'nothingB'},
             {'number':233,'name':'tissue'},
             {'number':13,'name':'nothingC'},
             {'number':33,'name':'brain'}
