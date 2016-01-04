@@ -42,16 +42,13 @@
     "js": [ 
         "/build/test.js",
         "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js",
         "https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
     ],
     "css":["/css/biojs-vis-summary-horizontal-bar-graph.css"],
     "snippets": ["examples"],
-    "first": "filtered_clec4e_mouse",
-    "second": "filtered_gapdh_human",
-    "third": "filtered_oct4_human",
-    "fourth": "normal_oct4_human"
+    "first": "main_example",
+    "second": "small_example"
 
    }, 
-  "keywords": ["d3","graph","stemformatics","biojs","YuGene"]
+  "keywords": ["d3","graph","stemformatics","biojs","summary","bar"]
 }
