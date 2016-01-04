@@ -70,7 +70,7 @@ d3.json(data_url,function (error,data){
     subtitle1 = "Subtitle"
     subtitle2 = "Subtitle"
     target = rootDiv;
-
+    height = 800;
     width = 600;
     ds_id_array =  [5008,3000,5003];
     ds_id_array =  [5008];
@@ -90,8 +90,7 @@ d3.json(data_url,function (error,data){
         domain_colours : ["#FFFFFF","#7f3f98"],
         error_bar_width:5,
         error_dividor:100,//100 means error bars will not show when error < 1% value 
-        graph_size: "small",
-        height: {small: 400, large: 600},
+        height: height,
         //horizontal lines takes a name, colour and the yvalue. If no colour is given one is chosen at random
         horizontal_lines: [["Detection Threshold", "green", 5], ["Median", , 8.93]],
         horizontal_line_value_column: 'value',
@@ -101,7 +100,7 @@ d3.json(data_url,function (error,data){
         legend_range: [0,100],
         line_stroke_width: "2px",
         margin_legend: width - 190,
-        margin:{top: 180, left:200, bottom: 530, right: 300},
+        margin:{top: 180, left:200, bottom: 230, right: 300},
         margin_small:{top: 40, left: 40, bottom: 40, right: 80},
         //default number of colours is 39 (before it reitterates over it again)
         number_of_colours: 39,
@@ -121,7 +120,7 @@ d3.json(data_url,function (error,data){
         tooltip: tooltip, // using d3-tips
         //tooltip1: tooltip1, // using d3-tips unique_id: "chip_id",
         watermark:"http://www1.stemformatics.org/img/logo.gif",
-        width: {small: 600, large: width}, // suggest 50 per sample
+        width:  width, // suggest 50 per sample
         x_axis_text_angle:-45, 
         x_axis_title: "Samples",
         x_column: 'x_position',
