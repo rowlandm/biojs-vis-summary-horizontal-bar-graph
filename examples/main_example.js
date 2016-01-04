@@ -6,7 +6,7 @@ function round_to_two_decimal_places(num){
 }
 
 //The url's to the data displayed
-data_url= '../data/json_format_clec4e_human_dev_s4m_very_small.txt';
+data_url= '../data/clec4e_human_dev_s4m_very_small.tsv';
 
 /* Extracting the data from the csv files for use in the graph
  * Also sets relevent options based on the data passed in (for example
