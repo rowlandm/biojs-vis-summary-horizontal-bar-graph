@@ -61,10 +61,30 @@ d3.json(data_url,function (error,data){
     });
     */
 
-    //data = [{'name':'embryo','number':4},{'number':33,'name':'brain'}];
-    data = [4,5,6,7,7,56,6,6,7,77,0];
-    data.sort(function(a, b){return b-a});
+    data = [{'name':'embryo','number':4},
+            {'number':33,'name':'cell'},
+            {'number':233,'name':'tissue'},
+            {'number':133,'name':'nothing'},
+            {'number':233,'name':'tissue'},
+            {'number':13,'name':'nothing'},
+            {'number':23,'name':'tissue'},
+            {'number':1453,'name':'nothing'},
+            {'number':233,'name':'tissue'},
+            {'number':13,'name':'nothing'},
+            {'number':33,'name':'brain'}
+            ];
+    // simple array
+    //data = [4,5,6,7,7,56,6,6,7,77,0];
+    // data.sort(function(a, b){return b-a});
 
+
+    // http://stackoverflow.com/a/19326174
+    // use slice() to copy the array and not just make a reference
+    var sort_by_number = data.slice(0);
+    sort_by_number.sort(function(a,b) {
+        return b.number - a.number;
+    });
+    data = sort_by_number;
 
     title = "Overall Summary Horizontal Bar Graph for Clec4e ";
     subtitle1 = "Subtitle"
