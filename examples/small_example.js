@@ -23,7 +23,7 @@ d3.json(data_url,function (error,data){
 
     data = [{'name':'embryo','number':4},
             {'number':33,'name':'cell'},
-            {'number':233,'name':'tissueB'},
+            {'number':2300,'name':'tissueB'},
             {'number':133,'name':'nothingA'},
             {'number':238,'name':'tissueK'},
             {'number':13,'name':'nothing'},
@@ -49,8 +49,8 @@ d3.json(data_url,function (error,data){
     title = "Sample Breakdown by Tissue";
     target = rootDiv;
     height = 250;
-    width = 200;
-    margin = {top: 50, left:20, bottom: 10, right: 20};
+    width = 300;
+    margin = {top: 50, left:10, bottom: 10, right: 10};
 
 
     //The main options for the graph
@@ -63,7 +63,7 @@ d3.json(data_url,function (error,data){
         gap_between_groups: 2,
         height: height,
         height_margin_for_title : 25,
-        horizontal_space_for_labels: 100, // this is for giving space on the left side of the bar graphs
+        horizontal_space_for_labels: 100, // this is for giving space on the left side of the bar graphs and for the numbers on the right
         inner_margin: 10, // margin between the bars and the outer box
         margin: margin,
         target: target,
@@ -85,6 +85,11 @@ d3.json(data_url,function (error,data){
     options.title = 'Samples Breakdown by y';
     $('body').append('<div id="new2"></div>');
     var instance3 = new app(options);
+
+    options.target = '#new3';
+    options.title = 'Samples Breakdown by Yy';
+    $('body').append('<div id="new3"></div>');
+    var instance4 = new app(options);
 
 
 }); 
