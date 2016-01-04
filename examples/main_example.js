@@ -112,10 +112,12 @@ d3.json(data_url,function (error,data){
         error_dividor:100,//100 means error bars will not show when error < 1% value 
         height: height,
         //horizontal lines takes a name, colour and the yvalue. If no colour is given one is chosen at random
+        horizontal_space_for_labels: 100, // this is for giving space on the left side of the bar graphs
         horizontal_lines: [["Detection Threshold", "green", 5], ["Median", , 8.93]],
         horizontal_line_value_column: 'value',
         //to have horizontal grid lines = width (to span accross the grid), otherwise = 0
         horizontal_grid_lines: width,
+        gap_at_end_of_graph: 10,
         legend_class: "legend",
         legend_range: [0,100],
         line_stroke_width: "2px",
