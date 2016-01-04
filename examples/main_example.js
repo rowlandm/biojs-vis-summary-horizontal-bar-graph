@@ -64,13 +64,13 @@ d3.json(data_url,function (error,data){
     data = [{'name':'embryo','number':4},
             {'number':33,'name':'cell'},
             {'number':233,'name':'tissue'},
-            {'number':133,'name':'nothing'},
+            {'number':133,'name':'nothingA'},
             {'number':233,'name':'tissue'},
             {'number':13,'name':'nothing'},
             {'number':23,'name':'tissue'},
-            {'number':1453,'name':'nothing'},
+            {'number':1453,'name':'nothingB'},
             {'number':233,'name':'tissue'},
-            {'number':13,'name':'nothing'},
+            {'number':13,'name':'nothingC'},
             {'number':33,'name':'brain'}
             ];
     // simple array
@@ -90,7 +90,7 @@ d3.json(data_url,function (error,data){
     subtitle1 = "Subtitle"
     subtitle2 = "Subtitle"
     target = rootDiv;
-    height = 800;
+    height = 900;
     width = 600;
     ds_id_array =  [5008,3000,5003];
     ds_id_array =  [5008];
@@ -110,6 +110,7 @@ d3.json(data_url,function (error,data){
         domain_colours : ["#FFFFFF","#7f3f98"],
         error_bar_width:5,
         error_dividor:100,//100 means error bars will not show when error < 1% value 
+        gap_between_groups: 2,
         height: height,
         //horizontal lines takes a name, colour and the yvalue. If no colour is given one is chosen at random
         horizontal_space_for_labels: 100, // this is for giving space on the left side of the bar graphs
@@ -117,7 +118,7 @@ d3.json(data_url,function (error,data){
         horizontal_line_value_column: 'value',
         //to have horizontal grid lines = width (to span accross the grid), otherwise = 0
         horizontal_grid_lines: width,
-        gap_at_end_of_graph: 10,
+        inner_margin: 10, // margin between the bars and the outer box
         legend_class: "legend",
         legend_range: [0,100],
         line_stroke_width: "2px",
