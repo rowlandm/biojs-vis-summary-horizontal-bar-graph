@@ -12,34 +12,17 @@ data_url= '../data/json_format_clec4e_human_dev_s4m_very_small.txt';
 /* Extracting the data from the csv files for use in the graph
  * Also sets relevent options based on the data passed in (for example
  * calculating the min and max values of the graph */
-d3.json(data_url,function (error,data){
+d3.tsv(data_url,function (error,data){
 
-    /*
     data.forEach(function(d){
         // ths + on the front converts it into a number just in case
-        
+        d.number = +d.number;
     });
-    */
-
-    data = [{'name':'embryo','number':4},
-            {'number':33,'name':'cell'},
-            {'number':2300,'name':'tissueB'},
-            {'number':133,'name':'nothingA'},
-            {'number':238,'name':'tissueK'},
-            {'number':13,'name':'nothing'},
-            {'number':23,'name':'tissueF'},
-            {'number':145,'name':'nothingB'},
-            {'number':233,'name':'tissue'},
-            {'number':13,'name':'nothingC'},
-            {'number':33,'name':'brain'}
-            ];
-    // simple array
-    //data = [4,5,6,7,7,56,6,6,7,77,0];
-    // data.sort(function(a, b){return b-a});
 
 
     // http://stackoverflow.com/a/19326174
     // use slice() to copy the array and not just make a reference
+    // this is so that we can sort easily
     var sort_by_number = data.slice(0);
     sort_by_number.sort(function(a,b) {
         return b.number - a.number;
